@@ -132,7 +132,7 @@ type HlsConfig =
     minAutoBitrate: number,
     loader: any, // TODO(typescript-xhrloader): Type once XHR is done
     xhrSetup?: (xhr: XMLHttpRequest, url: string) => void,
-
+    aesSetup?: any,
     // Alt Audio
     audioStreamController?: any, // TODO(typescript-audiostreamcontroller): Type once file is done
     audioTrackController?: any, // TODO(typescript-audiotrackcontroller): Type once file is done
@@ -209,6 +209,7 @@ export const hlsDefaultConfig: HlsConfig = {
   fLoader: void 0, // used by fragment-loader
   pLoader: void 0, // used by playlist-loader
   xhrSetup: void 0, // used by xhr-loader
+  aesSetup: void 0, // used by aes-loader
   licenseXhrSetup: void 0, // used by eme-controller
   // fetchSetup: void 0,
   abrController: AbrController,
